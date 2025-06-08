@@ -10,7 +10,7 @@ export default function Home() {
     return (
         <main
             className="min-h-screen bg-fixed bg-center  bg-repeat-round"
-            style={{backgroundImage: `url(${basePath}'/img/texture_background.png')`}}
+            style={{backgroundImage: `url(${basePath}/img/texture_background.png)`}}
         >
             <Navbar currentPage="home"/> {/* Use the new Navbar and pass the current page identifier */}
             <Hero/>
