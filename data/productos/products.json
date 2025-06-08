@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Producto Orgánico 1",
+    "descripcion": "Un producto natural y sostenible, elaborado con materiales ecológicos y respetuosos con el medio ambiente.",
+    "fotos": [
+      "/data/img/placeholder.png",
+      "/img/p1_detail_black.svg",
+      "/img/p1_detail_white.svg"
+    ],
+    "precio": 49.99,
+    "colores": ["Natural", "Negro", "Blanco"]
+  },
+  {
+    "id": 2,
+    "nombre": "Producto Artesanal 2",
+    "descripcion": "Elaborado a mano por artesanos locales, cada pieza es única y tiene su propia personalidad y carácter.",
+    "fotos": [
+      "/data/img/placeholder.png",
+      "/img/p2_detail_black.svg",
+      "/img/p2_detail_white.svg"
+    ],
+    "precio": 79.99,
+    "colores": ["Marrón", "Negro", "Beige"]
+  },
+  {
+    "id": 3,
+    "nombre": "Producto Minimalista 3",
+    "descripcion": "Diseño simple y elegante que se integra perfectamente en cualquier espacio, aportando un toque de sofisticación.",
+    "fotos": [
+      "/data/img/placeholder.png",
+      "/img/p3_detail_black.svg",
+      "/img/p3_detail_white.svg"
+    ],
+    "precio": 29.99,
+    "colores": ["Blanco", "Negro", "Gris"]
+  },
+  {
+    "id": 4,
+    "nombre": "Producto Exclusivo 4",
+    "descripcion": "Una pieza exclusiva de nuestra colección limitada, perfecta para quienes buscan algo único y especial.",
+    "fotos": [
+      "/data/img/placeholder.png",
+      "/img/p4_detail_black.svg",
+      "/img/p4_detail_white.svg"
+    ],
+    "precio": 99.99,
+    "colores": ["Premium", "Clásico", "Moderno"]
+  }
+]
