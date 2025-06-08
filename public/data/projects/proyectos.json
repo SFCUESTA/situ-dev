@@ -3,7 +3,7 @@
     "id": 1,
     "nombre": "Casa Moderna",
     "descripcion": "Diseño minimalista con líneas limpias y espacios abiertos que maximizan la luz natural y la conexión con el entorno.",
-    "imagen": "/data/projects/img/placeholder_project.jpg",
+    "imagen": "data/projects/img/placeholder_project.jpg",
     "ubicacion": "Madrid, España",
     "año": 2023
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "nombre": "Apartamento Urbano",
     "descripcion": "Renovación de un espacio urbano que combina elementos industriales con toques cálidos y orgánicos para crear un ambiente acogedor.",
-    "imagen": "/data/projects/img/placeholder_project.jpg",
+    "imagen": "data/projects/img/placeholder_project.jpg",
     "ubicacion": "Barcelona, España",
     "año": 2022
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "nombre": "Villa Mediterránea",
     "descripcion": "Proyecto que fusiona la arquitectura tradicional mediterránea con elementos contemporáneos, creando espacios que respiran y fluyen naturalmente.",
-    "imagen": "/data/projects/img/placeholder_project.jpg",
+    "imagen": "data/projects/img/placeholder_project.jpg",
     "ubicacion": "Valencia, España",
     "año": 2023
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "nombre": "Loft Industrial",
     "descripcion": "Transformación de un antiguo espacio industrial en una vivienda moderna que conserva y celebra los elementos originales del edificio.",
-    "imagen": "/data/projects/img/placeholder_project.jpg",
+    "imagen": "data/projects/img/placeholder_project.jpg",
     "ubicacion": "Sevilla, España",
     "año": 2021
   }

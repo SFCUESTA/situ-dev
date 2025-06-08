@@ -3,17 +3,19 @@
 import {useState, useEffect} from 'react';
 import {motion} from "motion/react";
 import {InfiniteMovingCards} from '@/components/ui/infinite-moving-cards';
-import Link from 'next/link'; // Import Link for the button
+import Link from 'next/link';
 
 export default function Catalog() {
     const [carouselItems, setCarouselItems] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
     useEffect(() => {
         setIsLoading(true);
         setError(null);
-        fetch('/data/products/products.json')
+        fetch(`${basePath}/data/products/products.json`) // MODIFIED
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -26,21 +28,27 @@ export default function Catalog() {
                     throw new Error('Product data is not in the expected format.');
                 }
 
-                const items = data.map(product => ({
-                    name: product.nombre,
-                    imageSrc: product.fotos[0],
-                    title: "",
-                }));
+                const items = data.map(product => {
+                    // Assuming product.fotos[0] is a string like "images/category/image.jpg"
+                    // and does not start with "/"
+                    const imagePath = product.fotos && product.fotos.length > 0 ? String(product.fotos[0]) : 'default-image.png'; // Fallback image
+                    return {
+                        name: product.nombre,
+                        imageSrc: `${basePath}/${imagePath.startsWith('/') ? imagePath.substring(1) : imagePath}`, // MODIFIED
+                        title: "", // This was empty, adjust if needed
+                    };
+                });
                 setCarouselItems(items);
             })
             .catch(fetchError => {
                 console.error('Error loading products:', fetchError);
                 setError(fetchError.message || 'Failed to load products.');
+                setCarouselItems([]); // Ensure items is an empty array on error
             })
             .finally(() => {
                 setIsLoading(false);
             });
-    }, []);
+    }, [basePath]); // Added basePath to dependency array
 
     return (
         <section className="py-16 bg-white/90 " id="catalogo">
@@ -50,7 +58,7 @@ export default function Catalog() {
                         className="text-4xl md:text-5xl font-bold mb-5 bg-gradient-to-r from-[var(--fondo-primario)] to-[var(--fondo-secundario)] bg-clip-text text-transparent"
                         initial={{opacity: 0, y: 30}}
                         whileInView={{opacity: 1, y: 0}}
-                        viewport={{once: false, amount: 0.2}} // Changed once to false, added amount
+                        viewport={{once: false, amount: 0.2}}
                         transition={{duration: 0.6, ease: "easeOut"}}
                     >
                         Nuestro Catálogo
@@ -59,7 +67,7 @@ export default function Catalog() {
                         className="text-lg md:text-xl text-[var(--texto-subtitulo)] max-w-2xl mx-auto"
                         initial={{opacity: 0, y: 20}}
                         whileInView={{opacity: 1, y: 0}}
-                        viewport={{once: false, amount: 0.2}} // Changed once to false, added amount
+                        viewport={{once: false, amount: 0.2}}
                         transition={{duration: 0.6, delay: 0.2, ease: "easeOut"}}
                     >
                         Descubre nuestra colección de productos artesanales, diseñados con materiales sostenibles y un
@@ -88,7 +96,7 @@ export default function Catalog() {
                         />
                         <div className="mt-12 text-center">
                             <Link
-                                href="/catalog"
+                                href="/catalog" // This link will also be correctly prefixed by Next.js if basePath is set
                                 className="inline-block bg-[var(--fondo-primario)] text-white font-semibold py-3 px-8 rounded-lg hover:bg-[var(--fondo-secundario)] transition-colors duration-300 text-lg shadow-md hover:shadow-lg"
                             >
                                 Ver Catálogo Completo

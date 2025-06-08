@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import ProductCard from '../components/ProductCard';
 // import Image from "next/image"; // Unused import
 import Navbar from '../components/Navbar';
-import {Filter as FilterIcon, X as XIcon, ChevronDown, ChevronUp} from 'lucide-react'; // Added ChevronDown, ChevronUp
+import {Filter as FilterIcon, X as XIcon, ChevronDown, ChevronUp} from 'lucide-react';
 
 export default function CatalogPage() {
     const [products, setProducts] = useState([]);
@@ -20,29 +20,57 @@ export default function CatalogPage() {
     const [selectedCategories, setSelectedCategories] = useState([]);
     const [availableCategories, setAvailableCategories] = useState([]);
     const [error, setError] = useState(null);
-    const [isFilterOpen, setIsFilterOpen] = useState(false); // State for advanced filter visibility
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
     useEffect(() => {
         setIsLoading(true);
         setError(null);
-        fetch('/data/products/products.json')
+        fetch(`${basePath}/data/products/products.json`) // MODIFIED
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 return response.json();
             })
-            .then(data => {
-                if (!Array.isArray(data)) {
-                    console.error('Fetched data is not an array:', data);
+            .then(rawData => {
+                if (!Array.isArray(rawData)) {
+                    console.error('Fetched data is not an array:', rawData);
                     throw new Error('Product data is not in the expected format.');
                 }
-                setProducts(data);
+
+                // Prepend basePath to image paths within the product data
+                // Assuming product.fotos is an array of strings (image paths)
+                // and each path is relative like "images/product/image.jpg"
+                const processedData = rawData.map(product => {
+                    const newFotos = product.fotos && Array.isArray(product.fotos)
+                        ? product.fotos.map(fotoPath => {
+                            // Ensure fotoPath is a string and doesn't have a leading slash
+                            // if basePath is to be prepended.
+                            const path = String(fotoPath);
+                            return `${basePath}/${path.startsWith('/') ? path.substring(1) : path}`;
+                        })
+                        : product.fotos; // Keep as is if not an array or undefined
+
+                    // If you have other specific image fields, process them similarly:
+                    // const newMainImage = product.imagenPrincipal
+                    //    ? `${basePath}/${String(product.imagenPrincipal).startsWith('/') ? String(product.imagenPrincipal).substring(1) : String(product.imagenPrincipal)}`
+                    //    : product.imagenPrincipal;
+
+                    return {
+                        ...product,
+                        fotos: newFotos,
+                        // imagenPrincipal: newMainImage, // Example
+                    };
+                });
+
+                setProducts(processedData);
 
                 const colorNames = new Set();
                 const categoryNames = new Set();
 
-                data.forEach(product => {
+                processedData.forEach(product => {
                     if (product && Array.isArray(product.colores)) {
                         product.colores.forEach(colorObj => colorNames.add(colorObj.color));
                     }
@@ -56,12 +84,12 @@ export default function CatalogPage() {
             .catch(fetchError => {
                 console.error('Error loading products:', fetchError);
                 setError(fetchError.message || 'Failed to load products.');
-                setProducts([]);
+                setProducts([]); // Ensure products is an empty array on error
             })
             .finally(() => {
                 setIsLoading(false);
             });
-    }, []);
+    }, [basePath]); // Added basePath to dependency array
 
     useEffect(() => {
         const filtered = products.filter(product => {

@@ -5,9 +5,9 @@
     "categoria": "Decoración",
     "descripcion": "Un jarrón de cerámica natural y sostenible, con un diseño orgánico que evoca la tranquilidad de la naturaleza. Perfecto para flores secas o como pieza central.",
     "fotos": [
-      "/data/products/img/placeholder.png",
-      "/data/products/img/placeholder2.png",
-      "/data/products/img/placeholder3.png"
+      "data/products/img/placeholder.png",
+      "data/products/img/placeholder2.png",
+      "data/products/img/placeholder3.png"
     ],
     "tamaño": "Mediano (25cm alto)",
     "colores": [
@@ -31,8 +31,8 @@
     "categoria": "Organización",
     "descripcion": "Elaborada a mano con fibras de yute natural, esta cesta es ideal para almacenar mantas, revistas o juguetes, aportando calidez y textura.",
     "fotos": [
-      "/data/products/img/placeholder4.png",
-      "/data/products/img/placeholder.png"
+      "data/products/img/placeholder4.png",
+      "data/products/img/placeholder.png"
     ],
     "tamaño": "Grande (40cm diámetro)",
     "colores": [
@@ -56,9 +56,9 @@
     "categoria": "Mobiliario",
     "descripcion": "Diseño modular simple y elegante que se integra perfectamente en cualquier espacio, ofreciendo soluciones de almacenaje versátiles.",
     "fotos": [
-      "/data/products/img/placeholder2.png",
-      "/data/products/img/placeholder5.png",
-      "/data/products/img/placeholder.png"
+      "data/products/img/placeholder2.png",
+      "data/products/img/placeholder5.png",
+      "data/products/img/placeholder.png"
     ],
     "tamaño": "Pequeño (3 módulos)",
     "colores": [
@@ -82,8 +82,8 @@
     "categoria": "Iluminación",
     "descripcion": "Una lámpara de pie elegante con base de metal y pantalla de tela, perfecta para crear un ambiente cálido y acogedor en salones o estudios.",
     "fotos": [
-      "/data/products/img/placeholder4.png",
-      "/data/products/img/placeholder6.png"
+      "data/products/img/placeholder4.png",
+      "data/products/img/placeholder6.png"
     ],
     "tamaño": "Alto (150cm)",
     "colores": [
@@ -107,9 +107,9 @@
     "categoria": "Textiles",
     "descripcion": "Juego de dos cojines de lino lavado, suaves al tacto y disponibles en colores neutros para complementar cualquier decoración de sofá o cama.",
     "fotos": [
-      "/data/products/img/placeholder5.png",
-      "/data/products/img/placeholder2.png",
-      "/data/products/img/placeholder6.png"
+      "data/products/img/placeholder5.png",
+      "data/products/img/placeholder2.png",
+      "data/products/img/placeholder6.png"
     ],
     "tamaño": "Estándar (45x45cm)",
     "colores": [
@@ -133,9 +133,9 @@
     "categoria": "Mobiliario",
     "descripcion": "Mesa de centro robusta con sobre de madera maciza y patas de metal negro. Un toque industrial y cálido para tu salón.",
     "fotos": [
-      "/data/products/img/placeholder.png",
-      "/data/products/img/placeholder3.png",
-      "/data/products/img/placeholder5.png"
+      "data/products/img/placeholder.png",
+      "data/products/img/placeholder3.png",
+      "data/products/img/placeholder5.png"
     ],
     "tamaño": "Mediana (100x60x40cm)",
     "colores": [
@@ -155,8 +155,8 @@
     "categoria": "Decoración",
     "descripcion": "Espejo decorativo con un fino marco metálico, ideal para entradas, baños o como punto focal en cualquier habitación. Añade luz y amplitud.",
     "fotos": [
-      "/data/products/img/placeholder2.png",
-      "/data/products/img/placeholder5.png"
+      "data/products/img/placeholder2.png",
+      "data/products/img/placeholder5.png"
     ],
     "tamaño": "Diámetro 60cm",
     "colores": [
@@ -176,9 +176,9 @@
     "categoria": "Cocina",
     "descripcion": "Set de vajilla de gres para cuatro personas, con un diseño minimalista y duradero. Apta para uso diario, lavavajillas y microondas.",
     "fotos": [
-      "/data/products/img/placeholder6.png",
-      "/data/products/img/placeholder.png",
-      "/data/products/img/placeholder4.png"
+      "data/products/img/placeholder6.png",
+      "data/products/img/placeholder.png",
+      "data/products/img/placeholder4.png"
     ],
     "tamaño": "Set 12 piezas",
     "colores": [
@@ -202,9 +202,9 @@
     "categoria": "Textiles",
     "descripcion": "Alfombra ligera y versátil de algodón 100%, tejida a mano con un patrón geométrico discreto. Fácil de limpiar y combinar en diversos estilos.",
     "fotos": [
-      "/data/products/img/placeholder3.png",
-      "/data/products/img/placeholder.png",
-      "/data/products/img/placeholder2.png"
+      "data/products/img/placeholder3.png",
+      "data/products/img/placeholder.png",
+      "data/products/img/placeholder2.png"
     ],
     "tamaño": "120x180cm",
     "colores": [
@@ -224,8 +224,8 @@
     "categoria": "Accesorios de Baño",
     "descripcion": "Conjunto de accesorios de baño de cerámica y detalles en bambú: dispensador, jabonera y vaso. Aporta un toque natural y ordenado a tu aseo.",
     "fotos": [
-      "/data/products/img/placeholder5.png",
-      "/data/products/img/placeholder2.png"
+      "data/products/img/placeholder5.png",
+      "data/products/img/placeholder2.png"
     ],
     "tamaño": "Set 3 piezas",
     "colores": [
@@ -245,9 +245,9 @@
     "categoria": "Decoración",
     "descripcion": "Macetero de cerámica esmaltada con cuerdas de yute resistentes para colgar tus plantas favoritas y añadir un toque verde suspendido en interiores.",
     "fotos": [
-      "/data/products/img/placeholder.png",
-      "/data/products/img/placeholder6.png",
-      "/data/products/img/placeholder3.png"
+      "data/products/img/placeholder.png",
+      "data/products/img/placeholder6.png",
+      "data/products/img/placeholder3.png"
     ],
     "tamaño": "Pequeño (15cm diámetro)",
     "colores": [
@@ -267,8 +267,8 @@
     "categoria": "Organización",
     "descripcion": "Perchero minimalista de madera de roble y ganchos de metal, ideal para organizar abrigos y accesorios en entradas o dormitorios.",
     "fotos": [
-      "/data/products/img/placeholder4.png",
-      "/data/products/img/placeholder2.png"
+      "data/products/img/placeholder4.png",
+      "data/products/img/placeholder2.png"
     ],
     "tamaño": "Largo 60cm (5 ganchos)",
     "colores": [
