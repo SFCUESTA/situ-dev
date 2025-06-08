@@ -11,6 +11,10 @@ export default function Navbar({currentPage = ''}) {
     const [isScrolled, setIsScrolled] = useState(false);
     // const pathname = usePathname(); // Alternative for active link
 
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const logoPath = "img/logo_wtext_horizontal_white.svg"; // Relative path from public folder
+    const texturePath = "img/texture_background.png"; // Relative path for texture
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20); // Consider navbar "scrolled" after 20px
@@ -22,6 +26,12 @@ export default function Navbar({currentPage = ''}) {
 
     const navLinkClasses = "font-semibold text-sm md:text-base hover:text-gray-200 transition-colors duration-200";
     const activeLinkClasses = "underline underline-offset-4 decoration-[var(--fondo-accent)] decoration-2";
+
+    // Helper to construct full asset paths
+    const getAssetPath = (relativePath) => {
+        const path = String(relativePath);
+        return `${basePath}/${path.startsWith('/') ? path.substring(1) : path}`;
+    };
 
     return (
         <motion.header
@@ -35,7 +45,8 @@ export default function Navbar({currentPage = ''}) {
         >
             {/* Background Layers */}
             <div
-                className="absolute inset-0 bg-[url('/img/texture_background.png')] bg-repeat bg-center " // Very subtle texture
+                className="absolute inset-0 bg-repeat bg-center " // Very subtle texture
+                style={{backgroundImage: `url(${getAssetPath(texturePath)})`}} // MODIFIED for texture
                 aria-hidden="true"
             />
             <div
@@ -50,7 +61,7 @@ export default function Navbar({currentPage = ''}) {
                 >
                     <Link href="/" className="block"> {/* Added block for better layout control of Image */}
                         <Image
-                            src="/img/logo_wtext_horizontal_white.svg"
+                            src={getAssetPath(logoPath)} // MODIFIED for logo
                             alt="Situ Logo"
                             width={isScrolled ? 135 : 150} // Slightly smaller logo when scrolled
                             height={isScrolled ? 30 : 34} // Adjusted height proportionally for a horizontal logo

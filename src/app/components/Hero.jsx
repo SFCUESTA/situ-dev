@@ -5,49 +5,61 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+    // Helper to construct full asset paths
+    const getAssetPath = (relativePath) => {
+        const path = String(relativePath);
+        // Ensure relativePath doesn't start with '/' if basePath is to be prepended
+        return `${basePath}/${path.startsWith('/') ? path.substring(1) : path}`;
+    };
+
     // Define the paths and animation details for your pattern SVGs.
+    // Paths are now relative to the public folder, without a leading slash.
     const patternConfigs = [
         {
-            src: '/img/p1_detail_white.svg',
+            src: 'img/p1_detail_white.svg', // MODIFIED
             size: '200px',
-            duration: 75, // Slightly adjusted duration
+            duration: 75,
             animationProps: {
-                backgroundPosition: ['0% 0%', '200px 200px'], // Scrolls diagonally
-                rotate: [0, 4], // Gentle clockwise rotation
-                scale: [1, 1], // No scaling for this one
+                backgroundPosition: ['0% 0%', '200px 200px'],
+                rotate: [0, 4],
+                scale: [1, 1],
             }
         },
         {
-            src: '/img/p2_detail_white.svg',
+            src: 'img/p2_detail_white.svg', // MODIFIED
             size: '250px',
-            duration: 90, // Slightly adjusted duration
+            duration: 90,
             animationProps: {
-                backgroundPosition: ['0% 0%', '-250px 250px'], // Scrolls in another direction
-                rotate: [0, -5], // Gentle counter-clockwise rotation
-                scale: [1, 1.015, 1], // Subtle pulse effect
+                backgroundPosition: ['0% 0%', '-250px 250px'],
+                rotate: [0, -5],
+                scale: [1, 1.015, 1],
             }
         },
         {
-            src: '/img/p3_detail_white.svg',
+            src: 'img/p3_detail_white.svg', // MODIFIED
             size: '180px',
-            duration: 100, // Slightly adjusted duration
+            duration: 100,
             animationProps: {
-                backgroundPosition: ['0% 0%', '180px -180px'], // Different diagonal scroll
-                rotate: [0, 3], // Slower clockwise rotation
-                scale: [1, 1], // No scaling
+                backgroundPosition: ['0% 0%', '180px -180px'],
+                rotate: [0, 3],
+                scale: [1, 1],
             }
         },
         {
-            src: '/img/p4_detail_white.svg',
+            src: 'img/p4_detail_white.svg', // MODIFIED
             size: '220px',
-            duration: 110, // Slightly adjusted duration
+            duration: 110,
             animationProps: {
-                backgroundPosition: ['0% 0%', '-220px -220px'], // Yet another scroll direction
-                rotate: [0, -3.5], // Slower counter-clockwise rotation
-                scale: [1, 1.01, 1], // Another subtle pulse, slightly different
+                backgroundPosition: ['0% 0%', '-220px -220px'],
+                rotate: [0, -3.5],
+                scale: [1, 1.01, 1],
             }
         },
     ];
+
+    const logoNoTextPath = 'img/logo_no_text_white.svg'; // MODIFIED - relative path
 
     return (
         <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -63,7 +75,7 @@ export default function Hero() {
                     key={`pattern-${index}`}
                     className="absolute inset-0 opacity-[0.025]"
                     style={{
-                        backgroundImage: `url(${pattern.src})`,
+                        backgroundImage: `url(${getAssetPath(pattern.src)})`, // MODIFIED
                         backgroundRepeat: 'repeat',
                         backgroundSize: pattern.size,
                     }}
@@ -86,8 +98,8 @@ export default function Hero() {
                         <motion.h1
                             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
                             initial={{opacity: 0, y: 20}}
-                            whileInView={{opacity: 1, y: 0}} // Changed from animate
-                            viewport={{once: false, amount: 0.3}} // Added viewport
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: false, amount: 0.3}}
                             transition={{duration: 0.7}}
                         >
                             Diseño Orgánico y Minimalista
@@ -96,8 +108,8 @@ export default function Hero() {
                         <motion.p
                             className="text-lg md:text-xl mb-8 max-w-lg"
                             initial={{opacity: 0, y: 20}}
-                            whileInView={{opacity: 1, y: 0}} // Changed from animate
-                            viewport={{once: false, amount: 0.3}} // Added viewport
+                            whileInView={{opacity: 1, y: 0}}
+                            viewport={{once: false, amount: 0.3}}
                             transition={{duration: 0.7, delay: 0.2}}
                         >
                             Productos artesanales con materiales sostenibles, diseñados para integrarse perfectamente en
@@ -108,8 +120,8 @@ export default function Hero() {
                             <motion.button
                                 className="bg-white text-[var(--texto-titulo)] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-colors"
                                 initial={{opacity: 0, y: 20}}
-                                whileInView={{opacity: 1, y: 0}} // Changed from animate
-                                viewport={{once: false, amount: 0.3}} // Added viewport
+                                whileInView={{opacity: 1, y: 0}}
+                                viewport={{once: false, amount: 0.3}}
                                 transition={{duration: 0.7, delay: 0.4}}
                                 whileHover={{scale: 1.05}}
                                 whileTap={{scale: 0.95}}
@@ -123,13 +135,13 @@ export default function Hero() {
                     <div className="md:w-1/2 flex justify-center">
                         <motion.div
                             initial={{opacity: 0, scale: 0.8, rotate: -5}}
-                            whileInView={{opacity: 1, scale: 1, rotate: 0}} // Changed from animate
-                            viewport={{once: false, amount: 0.3}} // Added viewport
+                            whileInView={{opacity: 1, scale: 1, rotate: 0}}
+                            viewport={{once: false, amount: 0.3}}
                             transition={{duration: 0.8, delay: 0.3}}
                             whileHover={{scale: 1.05, rotate: 5}}
                         >
                             <Image
-                                src="/img/logo_no_text_white.svg"
+                                src={getAssetPath(logoNoTextPath)} // MODIFIED
                                 alt="Situ Logo"
                                 width={400}
                                 height={400}
@@ -148,8 +160,8 @@ export default function Hero() {
                     clipPath: 'path("M0,20% C12.5%,0% 25%,0% 37.5%,20% S62.5%,40% 75%,20% S87.5%,0% 100%,20% L100%,100% L0,100% Z")'
                 }}
                 initial={{opacity: 0}}
-                whileInView={{opacity: 0.1}} // Changed from animate
-                viewport={{once: false, amount: 0.1}} // Added viewport, amount 0.1 for early trigger
+                whileInView={{opacity: 0.1}}
+                viewport={{once: false, amount: 0.1}}
                 transition={{duration: 1, delay: 0.5}}
                 aria-hidden="true"
             />
