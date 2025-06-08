@@ -218,11 +218,11 @@ export const Card = ({
                 onClick={handleOpen}
                 // Added p-6 for padding, flex-col, justify-between.
                 // Base background (e.g., bg-neutral-800 or bg-gray-100) should ensure text contrast or rely on gradient.
-                className="relative z-10 flex h-80 w-56 flex-col justify-between overflow-hidden rounded-3xl bg-gray-100 p-6 md:h-[40rem] md:w-96 dark:bg-neutral-900">
+                className="relative z-10 flex h-80 w-72 flex-col justify-between overflow-hidden rounded-3xl bg-gray-100 p-6 md:h-[40rem] md:w-96 dark:bg-neutral-900">
 
                 {/* Gradient overlay for text readability over the image */}
                 <div
-                    className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-black/60 via-black/30 to-black/10"/>
+                    className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-green-950/70 via-black/30 to-white/20"/>
 
                 <BlurImage
                     src={card.src}
@@ -235,18 +235,18 @@ export const Card = ({
                 <div className="relative z-30">
                     <motion.p
                         layoutId={layout && card.id ? `card-category-${card.id}` : undefined}
-                        className="text-left font-sans text-sm font-medium text-white md:text-base">
+                        className="text-left font-sans text-sm font-medium text-green-950/70 md:text-base">
                         {card.category}
                     </motion.p>
                     <motion.p
                         layoutId={layout && card.id ? `card-title-${card.id}` : undefined}
-                        className="mt-2 max-w-xs text-left font-sans text-xl font-semibold text-white [text-wrap:balance] md:text-3xl">
+                        className="mt-2 max-w-xs text-left font-sans text-xl font-bold text-green-950 [text-wrap:balance] md:text-2xl">
                         {card.title}
                     </motion.p>
                     {card.year && (
                         <motion.p
                             // No layoutId needed for year as it's not animated between states in the same way
-                            className="mt-1 text-m text-gray-200 font-medium  text-left">
+                            className="mt-1 text-lg font-bold text-shadow-black/20 text-shadow-lg  text-white/80 text-left">
                             {card.year}
                         </motion.p>
                     )}
@@ -254,10 +254,10 @@ export const Card = ({
 
                 {/* Bottom Content Area (Description Snippet) */}
                 {card.description && (
-                    <div className="relative min-h-40 h-auto z-30 w-full">
+                    <div className="relative md:min-h-40 h-auto z-30 w-full">
                         <motion.p
                             // No layoutId needed for description snippet
-                            className="mt-2 max-w-full truncate text-left font-sans text-wrap text-xs text-gray-300 md:text-sm"
+                            className="mt-2 max-w-full truncate text-left font-sans text-wrap text-sm text-gray-100 md:text-md"
                             title={card.description}> {/* Show full description on hover */}
                             {card.description}
                         </motion.p>

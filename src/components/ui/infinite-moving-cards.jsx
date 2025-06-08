@@ -7,8 +7,8 @@ import {motion, useAnimate} from "motion/react";
 export const InfiniteMovingCards = ({
                                         items,
                                         direction = "left",
-                                        speed = "fast",
-                                        pauseOnHover = true,
+                                        speed = "normal",
+                                        pauseOnHover = false,
                                         className,
                                     }) => {
     const containerRef = useRef(null);
@@ -62,7 +62,7 @@ export const InfiniteMovingCards = ({
             const getAnimationDuration = (s) => {
                 if (s === "fast") return 20;
                 if (s === "normal") return 40;
-                return 80;
+                return 8000;
             };
             const initialX = direction === "left" ? 0 : -singleSetWidth;
             const targetX = direction === "left" ? -singleSetWidth : 0;
@@ -71,7 +71,8 @@ export const InfiniteMovingCards = ({
                 scroller,
                 {x: [initialX, targetX]},
                 {
-                    duration: getAnimationDuration(speed),
+                    // duration: getAnimationDuration(speed),
+                    duration: 200,
                     ease: "linear",
                     repeat: Infinity,
                 }
