@@ -1,0 +1,285 @@
+[
+  {
+    "id": 1,
+    "nombre": "Jarrón de Cerámica 'Terra'",
+    "categoria": "Decoración",
+    "descripcion": "Un jarrón de cerámica natural y sostenible, con un diseño orgánico que evoca la tranquilidad de la naturaleza. Perfecto para flores secas o como pieza central.",
+    "fotos": [
+      "/data/products/img/placeholder.png",
+      "/data/products/img/placeholder2.png",
+      "/data/products/img/placeholder3.png"
+    ],
+    "tamaño": "Mediano (25cm alto)",
+    "colores": [
+      {
+        "color": "Terracota",
+        "precio": 54.99
+      },
+      {
+        "color": "Negro Mate",
+        "precio": 59.99
+      },
+      {
+        "color": "Blanco Arena",
+        "precio": 54.99
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Cesta de Yute 'Natura'",
+    "categoria": "Organización",
+    "descripcion": "Elaborada a mano con fibras de yute natural, esta cesta es ideal para almacenar mantas, revistas o juguetes, aportando calidez y textura.",
+    "fotos": [
+      "/data/products/img/placeholder4.png",
+      "/data/products/img/placeholder.png"
+    ],
+    "tamaño": "Grande (40cm diámetro)",
+    "colores": [
+      {
+        "color": "Natural",
+        "precio": 79.99
+      },
+      {
+        "color": "Gris Oscuro",
+        "precio": 84.99
+      },
+      {
+        "color": "Beige",
+        "precio": 79.99
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Estantería Modular 'Kubik'",
+    "categoria": "Mobiliario",
+    "descripcion": "Diseño modular simple y elegante que se integra perfectamente en cualquier espacio, ofreciendo soluciones de almacenaje versátiles.",
+    "fotos": [
+      "/data/products/img/placeholder2.png",
+      "/data/products/img/placeholder5.png",
+      "/data/products/img/placeholder.png"
+    ],
+    "tamaño": "Pequeño (3 módulos)",
+    "colores": [
+      {
+        "color": "Blanco",
+        "precio": 89.99
+      },
+      {
+        "color": "Negro",
+        "precio": 94.99
+      },
+      {
+        "color": "Gris Claro",
+        "precio": 89.99
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Lámpara de Pie 'Luz Serena'",
+    "categoria": "Iluminación",
+    "descripcion": "Una lámpara de pie elegante con base de metal y pantalla de tela, perfecta para crear un ambiente cálido y acogedor en salones o estudios.",
+    "fotos": [
+      "/data/products/img/placeholder4.png",
+      "/data/products/img/placeholder6.png"
+    ],
+    "tamaño": "Alto (150cm)",
+    "colores": [
+      {
+        "color": "Dorado",
+        "precio": 129.99
+      },
+      {
+        "color": "Plata",
+        "precio": 125.99
+      },
+      {
+        "color": "Negro",
+        "precio": 119.99
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Set de Cojines de Lino 'Confort'",
+    "categoria": "Textiles",
+    "descripcion": "Juego de dos cojines de lino lavado, suaves al tacto y disponibles en colores neutros para complementar cualquier decoración de sofá o cama.",
+    "fotos": [
+      "/data/products/img/placeholder5.png",
+      "/data/products/img/placeholder2.png",
+      "/data/products/img/placeholder6.png"
+    ],
+    "tamaño": "Estándar (45x45cm)",
+    "colores": [
+      {
+        "color": "Arena",
+        "precio": 45.00
+      },
+      {
+        "color": "Gris Perla",
+        "precio": 45.00
+      },
+      {
+        "color": "Azul Noche",
+        "precio": 48.00
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Mesa de Centro 'Rústica Moderna'",
+    "categoria": "Mobiliario",
+    "descripcion": "Mesa de centro robusta con sobre de madera maciza y patas de metal negro. Un toque industrial y cálido para tu salón.",
+    "fotos": [
+      "/data/products/img/placeholder.png",
+      "/data/products/img/placeholder3.png",
+      "/data/products/img/placeholder5.png"
+    ],
+    "tamaño": "Mediana (100x60x40cm)",
+    "colores": [
+      {
+        "color": "Madera Natural",
+        "precio": 189.99
+      },
+      {
+        "color": "Madera Oscura",
+        "precio": 199.99
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Espejo Redondo 'Aura'",
+    "categoria": "Decoración",
+    "descripcion": "Espejo decorativo con un fino marco metálico, ideal para entradas, baños o como punto focal en cualquier habitación. Añade luz y amplitud.",
+    "fotos": [
+      "/data/products/img/placeholder2.png",
+      "/data/products/img/placeholder5.png"
+    ],
+    "tamaño": "Diámetro 60cm",
+    "colores": [
+      {
+        "color": "Dorado",
+        "precio": 75.50
+      },
+      {
+        "color": "Negro",
+        "precio": 70.00
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Vajilla de Gres 'Elemental' (12 piezas)",
+    "categoria": "Cocina",
+    "descripcion": "Set de vajilla de gres para cuatro personas, con un diseño minimalista y duradero. Apta para uso diario, lavavajillas y microondas.",
+    "fotos": [
+      "/data/products/img/placeholder6.png",
+      "/data/products/img/placeholder.png",
+      "/data/products/img/placeholder4.png"
+    ],
+    "tamaño": "Set 12 piezas",
+    "colores": [
+      {
+        "color": "Blanco Hueso",
+        "precio": 99.00
+      },
+      {
+        "color": "Gris Piedra",
+        "precio": 99.00
+      },
+      {
+        "color": "Verde Salvia",
+        "precio": 105.00
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Alfombra de Algodón 'Tejido Plano'",
+    "categoria": "Textiles",
+    "descripcion": "Alfombra ligera y versátil de algodón 100%, tejida a mano con un patrón geométrico discreto. Fácil de limpiar y combinar en diversos estilos.",
+    "fotos": [
+      "/data/products/img/placeholder3.png",
+      "/data/products/img/placeholder.png",
+      "/data/products/img/placeholder2.png"
+    ],
+    "tamaño": "120x180cm",
+    "colores": [
+      {
+        "color": "Beige/Blanco",
+        "precio": 89.90
+      },
+      {
+        "color": "Gris/Negro",
+        "precio": 89.90
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Set de Baño 'Zen'",
+    "categoria": "Accesorios de Baño",
+    "descripcion": "Conjunto de accesorios de baño de cerámica y detalles en bambú: dispensador, jabonera y vaso. Aporta un toque natural y ordenado a tu aseo.",
+    "fotos": [
+      "/data/products/img/placeholder5.png",
+      "/data/products/img/placeholder2.png"
+    ],
+    "tamaño": "Set 3 piezas",
+    "colores": [
+      {
+        "color": "Blanco/Bambú",
+        "precio": 35.00
+      },
+      {
+        "color": "Gris/Bambú",
+        "precio": 35.00
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Macetero Colgante 'Aire'",
+    "categoria": "Decoración",
+    "descripcion": "Macetero de cerámica esmaltada con cuerdas de yute resistentes para colgar tus plantas favoritas y añadir un toque verde suspendido en interiores.",
+    "fotos": [
+      "/data/products/img/placeholder.png",
+      "/data/products/img/placeholder6.png",
+      "/data/products/img/placeholder3.png"
+    ],
+    "tamaño": "Pequeño (15cm diámetro)",
+    "colores": [
+      {
+        "color": "Blanco Crudo",
+        "precio": 22.50
+      },
+      {
+        "color": "Verde Musgo",
+        "precio": 24.00
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Perchero de Pared 'Lineal'",
+    "categoria": "Organización",
+    "descripcion": "Perchero minimalista de madera de roble y ganchos de metal, ideal para organizar abrigos y accesorios en entradas o dormitorios.",
+    "fotos": [
+      "/data/products/img/placeholder4.png",
+      "/data/products/img/placeholder2.png"
+    ],
+    "tamaño": "Largo 60cm (5 ganchos)",
+    "colores": [
+      {
+        "color": "Madera Clara/Blanco",
+        "precio": 42.00
+      },
+      {
+        "color": "Madera Nogal/Negro",
+        "precio": 45.00
+      }
+    ]
+  }
+]
