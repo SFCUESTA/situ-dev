@@ -45,7 +45,7 @@ export default function Navbar({currentPage = ''}) {
         >
             {/* Background Layers */}
             <div
-                className="absolute inset-0 bg-repeat bg-center " // Very subtle texture
+                className="absolute inset-0 bg-repeat bg-center" // Very subtle texture
                 style={{backgroundImage: `url(${getAssetPath(texturePath)})`}} // MODIFIED for texture
                 aria-hidden="true"
             />
