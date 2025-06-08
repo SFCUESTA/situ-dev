@@ -6,8 +6,8 @@ const nextConfig = {
         unoptimized: true, // <--- Add this line
     },
     // Optional: If deploying to a subdirectory like username.github.io/my-repo
-    // basePath: '/situ-dev',
-    // assetPrefix: '/situ-dev/', // Also needed if using basePath
+    basePath: '/situ-dev',
+    assetPrefix: '/situ-dev/', // Also needed if using basePath
 };
 
 export default nextConfig;
